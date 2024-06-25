@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1FC7D4">
+    <title>Home | PancakeSwap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-RZTzBE9LVtQ0H6nH8i3AkLaXFCZg7iYs5KNc9VBJ8d5SESLQESIpTfUCuSO/A2CxTSUglFKb/L9N3dkw+ew5WQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&display=swap">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px;
+            border-radius: 50%;
+        }
+        .logo-name {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        .dropdown ul {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+        }
+        .dropdown ul li {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .dropdown ul li:hover {
+            background-color: #f0f2f5;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        .dropdown-menu {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .dropdown-menu .dots {
+            margin-left: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .dropdown-menu-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        .dropdown-menu-content ul {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+        }
+        .dropdown-menu-content ul li {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .dropdown-menu-content ul li:hover {
+            background-color: #f0f2f5;
+        }
+        .dropdown-menu:hover .dropdown-menu-content {
+            display: block;
+        }
+        .right-menu {
+            display: flex;
+            align-items: center;
+        }
+        .notification {
+            position: relative;
+            margin-right: 20px;
+        }
+        .notification img {
+            height: 30px;
+            border-radius: 50%;
+        }
+        .notification .number {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .language-selector, .settings, .network-selector {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .connect-wallet {
+            background-color: #1FC7D4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .dropdown ul {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+        }
+        .dropdown ul li {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .dropdown ul li:hover {
+            background-color: #f0f2f5;
+        }
+        .network-selector:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/40" alt="Logo">
+            </div>
+            <span class="logo-name">PancakeSwap</span>
+            <nav>
+                <ul>
+                    <li class="dropdown-menu">
+                        <a href="#">Trade</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li>Exchange</li>
+                                <li>Liquidity</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown-menu">
+                        <a href="#">Earn</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li>Farms</li>
+                                <li>Pools</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown-menu">
+                        <a href="#">Win</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li>Lottery</li>
+                                <li>Prediction</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown-menu">
+                        <a href="#">NFT</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li>Marketplace</li>
+                                <li>Collections</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown-menu">
+                        <a href="#">Buy</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li>Crypto</li>
+                                <li>Cards</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown-menu">
+                        <a href="#">More</a>
+                        <span class="dots">⋯</span>
+                        <div class="dropdown-menu-content">
+                            <ul>
+                                <li>Option 1</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right-menu">
+            <div class="notification">
+                <img src="https://via.placeholder.com/30" alt="Notification">
+                <div class="number">5</div>
+            </div>
+            <div class="language-selector"><i class="fas fa-globe"></i></div>
+            <div class="settings">⚙️</div>
+            <div class="network-selector">
+                Select Network
+                <div class="dropdown">
+                    <ul>
+                        <li>Ethereum</li>
+                        <li>Binance Smart Chain</li>
+                        <li>Polygon</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="connect-wallet">Connect Wallet</button>
+        </div>
+    </header>
+</body>
+</html>
