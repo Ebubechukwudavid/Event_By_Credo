@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-section {
+            background-color: #0077b5;
+            color: white;
+            position: relative;
+            padding: 50px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 50% 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+        .contact-section .header {
+            font-size: 36px;
+            margin-top: 45px;
+        }
+        .contact-section .header-bar {
+            width: 100px;
+            height: 5px;
+            background-color: white;
+            margin: 0 auto 20px;
+        }
+        .contact-section .highlight {
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+        .contact-section .waypoint {
+            margin-bottom: 25px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .contact-section .waypoint[data-animation="slide-in-left"] {
+            transform: translateX(-100%);
+        }
+        .contact-section .waypoint[data-animation="slide-in-right"] {
+            transform: translateX(100%);
+        }
+        .contact-section .waypoint[data-animation="pop-in"] {
+            transform: scale(0);
+        }
+        .contact-section .waypoint[data-animation="slide-in-left"],
+        .contact-section .waypoint[data-animation="slide-in-right"],
+        .contact-section .waypoint[data-animation="pop-in"] {
+            animation: animateIn 1s forwards;
+        }
+        @keyframes animateIn {
+            to {
+                transform: none;
+                opacity: 1;
+            }
+        }
+        .contact-section .contact-form {
+            max-width: 480px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-section .contact-form input,
+        .contact-section .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: none;
+            font-size: 16px;
+        }
+        .contact-section .contact-form .button-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .contact-section .contact-form .button {
+            background-color: white;
+            color: navy;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            width: auto;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-section .contact-form .button:hover {
+            background-color: lightgray;
+        }
+        .contact-section #success {
+            display: none;
+            margin-bottom: 20px;
+            color: green;
+            height: 100px;
+        }
+        .contact-section .mdi-close {
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .contact-section .contact-form .button-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Existing content of the body -->
+    <br>
+    <section class="contact-section">
+        <div class="header waypoint" data-animation="slide-in-left">
+            CONTACT
+        </div>
+        <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
+        <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".5s">
+            Give us a call today—a trial will convince you. Thank you!
+        </div>
+        <form class="waypoint contact-form" data-animation="pop-in" data-delay=".5s" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input placeholder="Name" type="text" name="name" required />
+            <input type="hidden" name="access_key" value="cdde2ef6-ca0e-437a-8dc6-17434a99a38f" />
+            <input placeholder="Enter email" type="email" name="email" required />
+            <textarea placeholder="Your Message" type="text" name="message"></textarea>
+            <div id="success">
+                <div>Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span></div>
+            </div>
+            <div class="button-container">
+                <input class="button" type="submit" id="submit" value="SUBMIT" />
+            </div>
+            <p id="result" class="error"></p>
+        </form>
+    </section>
+    <!-- Existing content of the body -->
+</body>
+</html>
