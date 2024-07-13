@@ -192,6 +192,7 @@ border: 1px solid #000000;
     
     .event {
         font-size: 12px; 
+        margin-bottom: 30px;
     }
 
     .discover p {
@@ -199,6 +200,7 @@ border: 1px solid #000000;
     }
 
     .discover .words > span {
+        margin-bottom: 46px;
         font-size: 49px; 
     }
 
