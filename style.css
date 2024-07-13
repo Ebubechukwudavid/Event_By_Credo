@@ -173,8 +173,9 @@ border: 1px solid #000000;
 
 @media (max-width: 900px) {
         .discover .words > span {
-        margin-bottom: 60px;
-        font-size: 50px; 
+        margin-bottom: 5px;
+        font-size: 51px; 
+        text-align: center;
     }
 
     .center-box {
